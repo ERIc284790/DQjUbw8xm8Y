@@ -1,0 +1,17 @@
+
+# trigger.yaml
+# Sample config for Trigger
+# Modify and place in /etc/trigger/
+
+trigger_environment: "cloud" 
+source: "k8s"
+
+triggers:
+  - event: "pod_restart"
+    identifier: "podname"        
+    action: "action or triggerbook"  
+
+  - event: "cron"
+    identifier: "infra_component"  
+    action: "action/triggerbook"  
+
